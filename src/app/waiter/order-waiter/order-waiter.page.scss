@@ -1,0 +1,157 @@
+.wrapper {
+    position: absolute; 
+    height: 4em;
+    padding-left: 2em;
+    padding-right: 2em;
+    top:0;
+  }
+  
+  #title{
+    text-align: center;
+  }
+  
+  #remove{
+    float: right;
+  }
+  
+  #menubuttons{
+    width: 100%;
+    padding-left: 30px;
+  }
+  
+  #appetizers, #soupd, #stuffed, #mainMeal, #drinks, #desserts{
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    float: left;
+    margin: 3px;
+    width:70px;
+    height: 40px;
+  }
+  
+  #sum, #submit{
+    background-color: white;
+    text-decoration: black;
+    border: 1px solid black;
+    height: 30px;
+    margin-left: 23px;
+  }
+  
+  #sum{
+    background-color: #0099FF;
+  }
+  
+  #submit{
+    background-color: #009900;
+  }
+  
+  #itemsMenuButt{
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    float: left;
+    margin:2px;
+    width: 90px;
+    height: 60px;
+    background-color: #8fbbbb;
+  }
+  
+  #printorder{
+    border-top: 3px solid #bbb;
+    margin-top: 10px;
+    text-align: right;
+  }
+  
+  h4, h3{
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  h3{
+    font-size: medium;
+  }
+  
+  h1{
+    text-align:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  h6{
+    font-size: x-small;
+  }
+  
+  #menu{
+    border-top: 3px solid #bbb;
+    margin-top: 10px;
+  }
+  
+  #itemsMenuButt:active, #appetizers:active, #soupd:active, #stuffed:active, #mainMeal:active, #drinks:active, #desserts:active, #sum:active, #submit:active, #remove:active {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    outline: none;
+  }
+  
+  
+  #closeTable{
+    text-align: right;
+    margin-right: 15px;
+    margin-top: 70px;
+  }
+  
+  label{
+    float:right;
+    text-align: right;
+  }
+  
+  select {
+    font-size: .9rem;
+    padding: 2px 5px;
+  }
+  
+  select:focus {
+    border-color: blanchedalmond;
+    background-color: darkgray;
+  }
+  
+  #cancelClose, #submitClose{
+    color: black;
+    font-weight: bold;
+    width: 50%;
+    display: inline-block;
+    height: 50px;
+    background-color: #164a416b;
+  }
+  
+  #closingCancelAndSubmit{
+    display: inline-block;
+    width: 100%;
+    margin-top: 70px;
+  }
+  
+  #closeTitle{
+    border-bottom: 3px solid #bbb;
+    width: 100%;
+  }
+  
+  #appetizers{
+    background-color: #009966;
+  }
+  #soupd{
+    background-color: #009999;
+  }
+  #stuffed{
+    background-color: #0099CC;  
+  }
+  #mainMeal{
+    background-color: #00CC66;
+  }
+  #drinks{
+    background-color: #00CC99;  
+  }
+  #desserts{
+    background-color: #00CCCC;  
+  }

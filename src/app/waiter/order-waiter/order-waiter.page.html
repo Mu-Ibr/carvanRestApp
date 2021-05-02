@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title id = 'title'> שולחן מספר {{tableNum}}<ion-icon id='remove'(click)='removeTable()' name="close-circle-outline"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div id='waiterOrderMenu' *ngIf="displayOrderMenu">
+  <div class = 'wrapper'>
+    <div id = 'menubuttons'>
+      <button id = 'appetizers' (click)='printMenu(appetizers)'>מנות ראשונות</button>
+      <button id = 'soupd' (click)='printMenu(soupd)'>מרקים</button>
+      <button id = 'stuffed' (click)='printMenu(stuffed)'>ממולאים</button>
+      <button id = 'mainMeal' (click)='printMenu(mainMeal)'>מנות עיקריות</button>
+      <button id = 'drinks' (click)='printMenu(drinks)'>משקאות</button>
+      <button id = 'desserts' (click)='printMenu(desserts)'>קינוחים</button>
+      <button id='sum' (click)='printOrder()'>פרטי ההזמנה</button>
+      <button id='submit' (click)='submitOrder()'>שלח הזמנה</button>
+    </div>
+    <div id = 'menu' *ngIf = "displayMenu">
+      <div id = 'menus' *ngFor="let item of menu">
+          <button (click) = 'addItem(item)' id = 'itemsMenuButt'>{{ item.name }}<br>מחיר: {{ item.price }}</button>
+      </div>
+    </div>
+    <div id = 'printorder' *ngIf = "displayOrder">
+      <ion-list id='list'>
+        <h5>פרטי הזמנת שולחן {{tableNum}}</h5>
+        <ion-item-sliding *ngFor="let item of printorder">
+          <ion-item>
+          <ion-label>
+            <h3>{{ item.name }}</h3>
+            <h4>מחיר : {{ item.price }}</h4>
+          </ion-label>
+        </ion-item>
+        <ion-item-options>
+          <ion-item-option (click)="removeItem(item)">
+            <ion-icon name="remove-outline"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+      <h4>סה"כ: {{totalSum}}</h4>
+    </div>
+  </div>
+</div>
+<div id='close' *ngIf='displayCloseTable'>
+  <div id='closeTitle'>
+    <h1>סגירת שולחן {{tableNum}}</h1>
+  </div>
+  <div id='closeTable'>
+    <div id='tablePayment'>
+      <label for="paymentType">&nbsp;&nbsp; :בחר סוג תשלום </label>
+      <select id="paymentType" ng-model="paymentType" ng-change="showSelectValue(paymentType)">
+        <option value="cash" selected>מזומן</option>
+        <option value="creditCard">כרטים אשראי</option>
+        <option value="coupon">קופון</option>
+      </select>
+      </div>
+    <br/>
+    <div id='tips'>
+      <label for="tipAmount">&nbsp;&nbsp; :טיפ </label>
+      <input type="number" id='tipAmount' name='tipAmount'>
+      <h6>.המידע על הטיפ הינו מידע פרטי למלצר ואינו מועבר למנהל או גוף אחר</h6>
+    </div>
+  </div>
+  <div id='closingCancelAndSubmit'>
+    <button id='cancelClose' (click)='cancelClose()'>בטל</button>
+    <button id='submitClose' (click)='closeAndGetBack()'>אשר וסגור שולחן</button>
+  </div>
+</div>
+</ion-content>

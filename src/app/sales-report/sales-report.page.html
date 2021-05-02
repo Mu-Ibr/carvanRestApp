@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title id='titleHeader'>דוח מכירות</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id='top'>
+  <div id='saleDailyOption'>
+    <ion-card id='saleDailyOptionCard'>
+      <label for="salesOption">&nbsp;&nbsp; :בחר סוג דוח </label>
+      <select id="salesOption" ng-model="salesOption" (change)="onChange($event.target.value)">
+        <option value="daily" selected>יומי</option>
+        <option value="weekly">שבועי</option>
+        <option value="monthly">חודשי</option>
+      </select>
+    </ion-card>
+  </div>
+    <div id='salesHeader'>
+      <h1>דוח מכירות {{salesOptionText}}</h1>
+    </div>
+  </div>
+  <div id='body'>
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header class='ioncardheader'>
+      הנמכרים 
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barChart></canvas>
+      </ion-card-content>
+    </ion-card>
+    </div>
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header class='ioncardheader'>
+      סוגי התשלום 
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barChart2></canvas>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div id='info'>
+    <ion-card id='salesInfo'>
+      <ion-card class='salesInfoCards'>
+        <h5>סה"כ מכירות בשקלים</h5>
+        <ion-card><h5>{{income}}</h5></ion-card>
+      </ion-card>
+      <ion-card class='salesInfoCards'>
+      <h5>ממוצע ההוצאה לאדם</h5>
+      <ion-card><h5>{{averageIncomePerPerson}}</h5></ion-card>
+    </ion-card>
+      <ion-card class='salesInfoCards'>
+      <h5>מספר השולחנות שנתפסו</h5>
+      <ion-card><h5>{{totalofTablesPerDay}}</h5></ion-card>
+    </ion-card>
+      <ion-card class='salesInfoCards'>
+      <h5>מספר הלקוחות</h5>
+      <ion-card><h5>{{totalOfClientsPerDay}}</h5></ion-card>
+    </ion-card>
+   </ion-card>
+  </div>
+</div>
+</ion-content>

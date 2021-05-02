@@ -1,5 +1,7 @@
 {
   "name": "carvan-rest-mApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

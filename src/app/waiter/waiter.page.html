@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title id='titleHeader'>מלצר</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="headers">
+    <h3>{{workerName}}  שלום</h3>
+    <h5>אנא בחר שולחן</h5>
+  </div>
+  <div id="tables">
+      <div *ngFor="let table of tables">
+          <ng-container *ngIf="table.isTaken; then red else green"></ng-container>
+          <ng-template #green>
+          <div class="isTaken">
+            <button (click) = 'SelectClicked(table)'>{{table.waiterName}}<br>{{table.tableNum}}</button>
+          </div>
+        </ng-template>
+        <ng-template #red>
+        <div class="isNotTaken">  
+          <button (click) = 'SelectClicked(table)'>{{table.waiterName}}<br>{{table.tableNum}}</button>
+        </div>
+        </ng-template>
+      </div>
+  </div>
+</ion-content>

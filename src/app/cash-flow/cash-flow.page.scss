@@ -1,0 +1,39 @@
+h4{
+    text-align: center;
+}
+
+#exp, #expWeekly{
+    color: red;
+}
+
+#inc, #incWeekly{
+    color: green;
+}
+
+#expenses, #incomes, #expensesWeekly, #incomesWeekly{
+    float: left;
+    height:130px;
+    width: 133px;
+}
+
+.ioncardheader{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+#infoNum{
+    text-decoration: underline;
+}
+
+#titleHeader{
+    text-align: right;
+}
+
+#body{
+    background-color: #164a410a;
+}
+
+ion-card{
+    background-color: #164a410a;
+}

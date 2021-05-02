@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title id='titleHeader'>הוצאות</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id='expenseAddButtons'>
+    <button id='fixedCosts' (click)="getExpenseList('fixedCosts')">הוצאות קבועות</button>
+    <button id='loans' (click)="getExpenseList('loans')">הלוואות</button>
+    <button id='wages' (click)="getExpenseList('wages')">משכורות</button>
+    <button id='others' (click)="getExpenseList('others')">אחר</button>
+    <h2>
+      <button  id='addNewExpense' (click)="addNewExpense()"><ion-icon name="add-circle-outline"></ion-icon></button>
+      {{listType}}
+    </h2>
+  </div>
+  <div id = 'expenseList'>
+  <ion-list>
+    <ion-item-sliding *ngFor="let expense of expenses">
+      <ion-item>
+        <ion-label> 
+          <div class="column">
+          <h5>למען: {{expense.nameFor}}</h5>
+          </div>
+          <div class="column">
+          <h5>סכום: {{expense.amount}}</h5>
+          </div>
+           <div class="column">
+           <h5>לתאריך: {{expense.dueDate}}</h5>
+          </div>
+          </ion-label>
+    </ion-item>
+    <ion-item-options>
+      <ion-item-option (click)="removeItem(expense)"><ion-icon name="close-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  </div>
+  <div id='totalSums'>
+  <h4>סכום ההוצאות ל{{listType}}: {{sum}}</h4>
+  <h4>סכום ההוצאות כולל : {{sumofAll}}</h4>
+</div>
+</ion-content>

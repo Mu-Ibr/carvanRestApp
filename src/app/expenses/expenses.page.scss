@@ -1,0 +1,54 @@
+#addNewExpense{
+    font-size: large;
+    background-color: white;
+}
+h5{
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h4, h2{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#totalSums{
+    bottom: 0;
+    width: 100%;
+    background-color: #164a4118;
+}
+
+#titleHeader{
+    text-align: right;
+}
+
+#fixedCosts, #wages, #loans, #others{
+    display: inline-block;
+    width: 25%;
+    height:40px;
+    //border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
+
+#expenseAddButtons{
+    border-bottom: black;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+#expenseList{
+    position: relative;
+    margin-top: 100px;
+    background-color: #164a413d;
+}
+
+ion-list{
+    background-color: #164a413d;
+}

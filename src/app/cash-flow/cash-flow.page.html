@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title id='titleHeader'>תזרים מזומנים</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id='body'>
+    <div class="ion-padding">
+      <ion-card id ='cashflowCard'>
+        <ion-card-header class='ioncardheader'>
+          תזרים מזומנים
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #barChart></canvas>
+        </ion-card-content>
+      </ion-card>
+      <ion-card id='infoCashFlow'>
+        <ion-card id='expenses'>
+          <h4 id='exp'>הוצאות לחודש הנוכחי</h4>
+          <ion-card class='infoNum'>
+            <h4>{{expenses}}</h4>
+          </ion-card>
+        </ion-card>
+        <ion-card id='incomes'>
+          <h4 id='inc'>הכנסות לחודש הנוכחי</h4>
+          <ion-card class='infoNum'>
+          <h4>{{incomes}}</h4>
+        </ion-card>
+        </ion-card>
+        <ion-card id='expensesWeekly'>
+          <h4 id='expWeekly'>הוצאות לשבוע הנוכחי</h4>
+          <ion-card class='infoNum'>
+          <h4>{{expenses}}</h4>
+        </ion-card>
+        </ion-card>
+        <ion-card id='incomesWeekly'>
+          <h4 id='incWeekly'>הכנסות לשבוע הנוכחי</h4>
+          <ion-card class='infoNum'>
+          <h4>{{incomes}}</h4>
+        </ion-card>
+        </ion-card>
+      </ion-card>
+      <br>
+    </div>
+  </div>
+</ion-content>
