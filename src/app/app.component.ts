@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Platform } from '@ionic/angular';
 //import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 //import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -14,7 +15,7 @@ export class AppComponent {
     private platform: Platform,
     //private splashScreen: SplashScreen,
     //private statusBar: StatusBar,
-    private tableservice: TableService
+    private tableservice: TableService, private store: AngularFirestore
   ) {
     this.initializeApp();
   }
