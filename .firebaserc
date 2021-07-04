@@ -1,6 +1,7 @@
 {
   "projects": {
-    "default": "carvanrestapp"
+    "default": "carvanrestapp",
+    "development": "carvanrestmapp"
   },
   "targets": {
     "carvanrestapp": {

@@ -9,32 +9,28 @@
 
 <ion-content>
   <div id='top'>
-    <button id='addReservation'><ion-icon name="add-circle-outline"></ion-icon></button>
+    <button id='addReservation' (click)="addReservatoin()"><ion-icon name="add-circle-outline"></ion-icon></button>
     <h1>הזמנות</h1>
   </div>
   <div>
     <ion-list id ='body'>
-      <!--<ion-item-sliding *ngFor="let worker of workers">
-        <ion-card id='workerCard'>
+      <ion-item-sliding *ngFor="let reserve of reserveses">
+        <ion-card id='reserveCard'>
         <ion-item>
-        <ion-thumbnail slot = "start">
-          <ion-img [src]="worker.imageUrl"></ion-img>
-        </ion-thumbnail>
         <ion-label>
-          <h2>שם: {{ worker.name }}</h2>
-          <h4>עובד: {{ worker.type }}</h4>
-          <h4>שנת התחלה: {{ worker.hireYear }}</h4>
-          <h4>טלפון: {{ worker.phone }}</h4>
-          <h4>מגורים: {{ worker.address }}</h4>
+          <h2>שם: {{ reserve.name }}</h2>
+          <h4>תאריך: {{ reserve.date }}</h4>
+          <h4>שעה: {{ reserve.time }}</h4>
+          <h4>כמות האנשים: {{ reserve.numOfClients }}</h4>
         </ion-label>
       </ion-item>
     </ion-card>
       <ion-item-options>
-        <ion-item-option (click)="removeWorker(worker)">
-          <ion-icon name="person-remove-outline"></ion-icon>
+        <ion-item-option (click)="removeReservation(reserve)">
+          <ion-icon name="remove-outline"></ion-icon>
         </ion-item-option>
       </ion-item-options>
-      </ion-item-sliding>-->
+      </ion-item-sliding>
     </ion-list>
   </div>
 </ion-content>
