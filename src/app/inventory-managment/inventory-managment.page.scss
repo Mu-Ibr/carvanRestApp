@@ -1,0 +1,52 @@
+#addNewItemList{
+    font-size: large;
+    background-color: white;
+}
+h5{
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h4, h2{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#totalSums{
+    bottom: 0;
+    width: 100%;
+    background-color: #164a4118;
+}
+
+#titleHeader{
+    text-align: right;
+}
+
+#equipments, #foods, #drinks, #cleaners, #others{
+    display: inline-block;
+    width: 20%;
+    height:40px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+#inventoryAddButton{
+    border-bottom: black;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+#inventoryList{
+    position: relative;
+    margin-top: 100px;
+    background-color: #164a413d;
+}
+
+ion-list{
+    background-color: #164a413d;
+}

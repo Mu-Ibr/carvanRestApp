@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2,h4{
+    text-align: right;
+}
+
+#addWorkerList{
+    border-radius: 20px;
+    margin-left: 45%;
+    margin-top: 10px;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #164a4183;
+    font-weight: bold;
+}
+
+#top{
+    position: fixed;
+    width: 100%;
+    z-index: 3;  
+    background-color: white;
+    border-bottom: 3px solid #bbb;
+  }
+  
+#body{
+    position: relative;
+    margin-top: 120px;
+    background-color: #164a413d;
+}
+
+#workerCard{
+    width: 95%;
+}
+
+#titleHeader{
+    text-align: right;
+}

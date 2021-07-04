@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title id='titleHeeader'>מנהל תפריט ראשי</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm='6' offset-sm='3'>
+        <div id='content'>
+          <h3>{{workerName}} שלום רב</h3>
+          <button id='niholOvdim' expand="block" [routerLink]="['/workers-managment']">
+            <ion-icon name="person" slot="end"></ion-icon><br>
+              ניהול עובדים
+          </button>
+          <button id='reservations' [routerLink]="['/reservations']">
+            <ion-icon name="calendar-outline" slot="end"></ion-icon><br>
+              הזמנות
+          </button>
+          <button id='niholKsafim' expand="block" [routerLink]="['/financial-managment']">
+            <ion-icon name="bar-chart-outline" slot="end"></ion-icon><br>
+            ניהול כספים
+          </button>
+          <button id='budgetManBut' expand="block" [routerLink]="['/budget-managment']">
+            <ion-icon name="calculator-sharp" slot="end"></ion-icon><br>
+            ניהול תקציב
+          </button>
+          <button id='cashFlowBut' expand="block" [routerLink]="['/cash-flow']">
+            <ion-icon name="bar-chart-sharp" slot="end"></ion-icon><br>
+            תזרים מזומנים
+          </button>
+          <button id='expensesBut' expand="block" [routerLink]="['/expenses']">
+            <ion-icon name="wallet-sharp" slot="end"></ion-icon><br>
+              הוצאות
+          </button>
+          <button id='salesReportBut' expand="block" [routerLink]="['/sales-report']">
+            <ion-icon name="file-tray-full-sharp" slot="end"></ion-icon><br> 
+              דוח מכירות
+          </button>
+          <button id='niholMilay' expand="block" [routerLink]="['/inventory-managment']">
+            <ion-icon name="cart-outline" slot="end"></ion-icon> <br>
+              מלאי
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

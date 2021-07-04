@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title id='titleHeader'>ניהול תקציב</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id='body'>
+    <div id='dailyNeed'>
+      <ion-card>
+      <h3>יעד יומי : {{forecastDailyTotal}}</h3>
+      <h6>היעד מבוסס על החישוב של ההוצאות וההכנסות שבמערכת</h6>
+    </ion-card>
+    </div>
+    <div class="ion-padding">
+      <ion-card class='card'>
+        <ion-card-header>
+          <h3>הוצאות (כללי)</h3>
+          <ion-card>
+            <h5 id="exp">סה"כ הוצאות: {{expenses}}</h5>
+          </ion-card>
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #barChart></canvas>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class='card'>
+        <ion-card-header>
+          <h3>הוצאות מלאי</h3>
+          <ion-card>
+            <h5 id="exp">סה"כ הוצאות מלאי: {{inventoriesSum}}</h5>
+          </ion-card>
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #barChart3></canvas>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class='card'>
+        <ion-card-header>
+          <h3>הכנסות</h3>
+          <ion-card>
+            <h5 id="inc">סה"כ הכנסות: {{income}}</h5>
+          </ion-card>
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #barChart2></canvas>
+        </ion-card-content>
+      </ion-card>
+      <ion-card id='sumOfIncomes'>
+        <h3>סה"כ רווחים: {{total}}</h3>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

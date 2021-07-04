@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title id='titleHeader'>ניהול כספים</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id='top'>
+    <h4>רכיבי ההוצאות לפי ההכנסות החודשי</h4>
+    <h6>משוער בערך לפי הנתונים הנמצאים במערכת</h6>
+    <br>
+  </div>
+  <div id='body'>
+    <ion-card>
+      <h5>מ"עמ:&nbsp;&nbsp; {{taxes}}</h5>
+    </ion-card>
+    <ion-card>
+      <h5>חומרי גלם:&nbsp;&nbsp; {{inventories}}</h5>
+    </ion-card>
+    <ion-card>
+      <h5>משכורת עובדים:&nbsp;&nbsp; {{wages}}</h5>
+    </ion-card>
+    <ion-card>
+      <h5>הוצאות קבועות:&nbsp;&nbsp; {{fixedCosts}}</h5>
+    </ion-card>
+    <ion-card>
+      <h5>פחת/ציוד:&nbsp;&nbsp; {{equipment}}</h5>
+    </ion-card>
+    <ion-card>
+      <h5>עמלות כרטיסי אשראי:&nbsp;&nbsp; {{commissionCreditCard}}</h5>
+    </ion-card>
+    <ion-card>
+      <h5>החזר הלוואה:&nbsp;&nbsp; {{refundLoans}}</h5>
+    </ion-card>
+    <ion-card id='cleanIcome'>
+      <h4>רווח נקי: {{profit}}</h4>
+    </ion-card>
+  </div>
+</ion-content>
