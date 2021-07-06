@@ -14,9 +14,63 @@ export class WorkersService {
       name: 'מוחמד איברהים',
       imageUrl: 'https://avatars0.githubusercontent.com/u/35499309?s=400&u=2a9f6da2bf22666f2b60ec781c5d02c70beb2213&v=4',
       type: 'מנהל',
+      hireYear: 2020,
+      phone: '0502901915',
+      address: 'אבו גוש'
+    },
+    {
+      id:'r2',
+      name: 'מוסא איברהים',
+      imageUrl: '',
+      type: 'מנהל',
+      hireYear: 1990,
+      phone: '0505193229',
+      address: 'אבו גוש'
+    },
+    {
+      id:'r3',
+      name: 'תאמר',
+      imageUrl: '',
+      type: 'מלצר',
       hireYear: 2002,
-      phone: '0508783678',
-      address: 'abu gosh'
+      phone: '0542891820',
+      address: 'אבו גוש'
+    },
+    {
+      id:'r4',
+      name: 'ואל',
+      imageUrl: '',
+      type: 'מלצר',
+      hireYear: 2009,
+      phone: '0522790125',
+      address: 'אבו גוש'
+    },
+    {
+      id:'r5',
+      name: 'וסוף',
+      imageUrl: '',
+      type: 'מלצר',
+      hireYear: 2012,
+      phone: '',
+      address: 'ירושלים'
+    },
+    {
+      id:'r6',
+      name: 'עבד',
+      imageUrl: '',
+      type: 'מטבח',
+      hireYear: 2000,
+      phone: '',
+      address: 'ירושלים'
+    },
+    {
+      id:'r7',
+      name: 'עלי',
+      imageUrl: '',
+      type: 'מטבח',
+      hireYear: 2006,
+      phone: '',
+      address: 'ירושלים'
     }
   ]
 
@@ -40,10 +94,10 @@ export class WorkersService {
       workerName: 'מוחמד',
     },
     {
-      username: 'lina',
+      username: 'tamer',
       password: 'password',
       type: 'waiter',
-      workerName: 'לינה',
+      workerName: 'תאמר',
     },
     {
       username: 'wael',

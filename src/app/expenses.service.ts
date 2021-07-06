@@ -27,7 +27,7 @@ export class ExpensesService {
     this.loans = 0;
     this.wages = 0;
     this.others = 0;
-    this.month = 0;
+    this.month = 3;
     for(let i=0; i<12; i++){
       this.expenseMonthly[i]=0;
     }

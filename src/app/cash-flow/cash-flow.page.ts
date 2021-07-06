@@ -18,8 +18,10 @@ export class CashFlowPage implements OnInit {
   @ViewChild('barChart') barChart;
 
   bars: any;
-  expenses: number;
-  incomes: number;
+  expensesMonthly: number;
+  incomesMonthly: number;
+  expensesWeekly: number;
+  incomesWeekly: number;
 
   constructor(
     private expenseservice: ExpensesService,
@@ -41,7 +43,7 @@ export class CashFlowPage implements OnInit {
         datasets: [{
           label: 'תזרים מזומנים ל3 החודשים האחרונים',
           //data: [expensesMonthly[((i)%months.length)], expensesMonthly[((i+1)%months.length)], expensesMonthly[((i+2)%months.length)], expensesMonthly[((i+3)%months.length)]],
-          data: [30000, 50000, 20000, 400 ],
+          data: [34200, 118250, 48900, 75695],
           backgroundColor: ['grey','blue','green','orange'], 
           borderColor: 'white',
           borderWidth: 1
@@ -63,10 +65,12 @@ export class CashFlowPage implements OnInit {
   }
 
   sumExpenses(){
-    this.expenses = (this.expenseservice.getSumofAll())+(this.inventoryservice.getSumofAll());
+    this.expensesMonthly = (this.expenseservice.getSumofAll())+(this.inventoryservice.getSumofAll());
+    this.expensesWeekly = (this.expenseservice.getSumofAll())+(this.inventoryservice.getSumofAll());
   }
 
   sumIncome(){
-    this.incomes = this.orderIncome.getTotalIncomeOfOrders();
+    this.incomesMonthly = 34200;
+    this.incomesWeekly =  34200;
     }
 }
