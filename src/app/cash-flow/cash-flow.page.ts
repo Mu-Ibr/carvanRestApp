@@ -42,8 +42,7 @@ export class CashFlowPage implements OnInit {
         labels: [months[(i+3)%months.length], months[(i+2)%months.length], months[(i+1)%months.length], months[(i)%months.length]],
         datasets: [{
           label: 'תזרים מזומנים ל3 החודשים האחרונים',
-          //data: [expensesMonthly[((i)%months.length)], expensesMonthly[((i+1)%months.length)], expensesMonthly[((i+2)%months.length)], expensesMonthly[((i+3)%months.length)]],
-          data: [34200, 118250, 48900, 75695],
+          data: [expensesMonthly[((i)%months.length)], expensesMonthly[((i+1)%months.length)], expensesMonthly[((i+2)%months.length)], expensesMonthly[((i+3)%months.length)]],
           backgroundColor: ['grey','blue','green','orange'], 
           borderColor: 'white',
           borderWidth: 1
@@ -70,7 +69,7 @@ export class CashFlowPage implements OnInit {
   }
 
   sumIncome(){
-    this.incomesMonthly = 34200;
-    this.incomesWeekly =  34200;
+    this.incomesMonthly = this.orderIncome.getDayIncomeOfWeek(this.orderIncome.getDay());
+    this.incomesWeekly =  this.orderIncome.getDayIncomeOfWeek(this.orderIncome.getDay());;
     }
 }

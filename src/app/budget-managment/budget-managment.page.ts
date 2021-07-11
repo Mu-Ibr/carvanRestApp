@@ -120,8 +120,7 @@ export class BudgetManagmentPage implements OnInit {
     this.incomeSum();
     this.inventoriesSum = this.inventory.getSumofAll();
     this.total = this.income - this.expenses;
-    //this.forecastDailyTotal = this.dailySum();
-    this.forecastDailyTotal = 6248;
+    this.forecastDailyTotal = this.dailySum();
   }
 
   expenseSum(){
