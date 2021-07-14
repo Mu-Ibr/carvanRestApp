@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "carvanrestmapp-77fa3": {
+      "hosting": {
+        "app": [
+          "carvanrestmapp-77fa3"
+        ]
+      }
+    }
+  }
+}

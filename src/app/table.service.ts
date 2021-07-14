@@ -4,6 +4,8 @@ import { Order } from './Order.model';
 import { Table } from './Table.model';
 import { WaiterMenuItem } from './WaiterMenuItem.model';
 import { tap, switchMap } from 'rxjs/operators';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +21,7 @@ export class TableService {
   private incomeWeeklyArr: number[] = [];
   private day: number;
   private previousDayIncome: number;
+
 
   constructor(private http: HttpClient){}
 

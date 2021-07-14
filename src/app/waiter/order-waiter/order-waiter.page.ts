@@ -81,15 +81,11 @@ export class OrderWaiterPage implements OnInit {
     this.notify.create({
       message: "ההזמנה נשלחה למטבח"
     });
-    this.totalOfSum;
     let str = "שולחן מספר "+this.tableNum+"\t"+"מלצר: "+this.table.waiterName+"\n";
     for(let order of this.table.orderedItems){
           str = str+order.name+" - \n";
         }
-    this.orderservice.addOrder(this.tableNum,0,str);
-  }
-
-  totalOfSum(){
+    this.orderservice.addOrder(this.tableNum,this.totalSum,str);
   }
 
   removeTable(){

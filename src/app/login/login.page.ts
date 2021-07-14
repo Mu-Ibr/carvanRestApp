@@ -11,6 +11,9 @@ import { WorkersService } from '../workers.service';
 })
 export class LoginPage implements OnInit {
 
+  username: string;
+  password: string;
+
   constructor(public router: Router,
     private workers: WorkersService, private toast: ToastController) { }
 
